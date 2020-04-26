@@ -1,0 +1,63 @@
+//Gallery Section for Mobile
+
+.gallery {
+  padding: 0.938rem 1.5rem 1.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $alabaster;
+
+  &__title {
+    @include header(1.5rem, 1rem);
+  }
+
+  &__items {
+    width: 18rem;
+    justify-content: space-evenly;
+
+    &--photo {
+      margin-bottom: 0.875rem;
+      filter: grayscale(100%);
+      transition: 0.4s ease;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+//Gallery Section for Tablet
+
+@include tablet {
+  .gallery {
+    padding: 0.313rem 1.5rem 1.875rem;
+    margin: 0;
+
+    &__title {
+      @include header(1.625rem, 2rem);
+      padding: 0.75rem 0 1.25rem;
+    }
+    &__items {
+      @include medium-grid(1.375rem, 0.313rem);
+      width: 100%;
+    }
+  }
+}
+
+//Gallery Section for Desktop
+
+@include desktop {
+  .gallery {
+    padding: 1.25rem 11.25rem 2.188rem;
+    margin: 0;
+    &__title {
+      @include header(2.25rem, 2rem);
+    }
+
+    &__items {
+      @include large-grid(1.375rem, 0.563rem);
+      width: 97%;
+    }
+  }
+}

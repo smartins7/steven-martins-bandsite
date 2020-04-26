@@ -1,0 +1,141 @@
+//About Section for Mobile
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 2.188rem;
+  margin: 0;
+  color: $black;
+
+  &__title {
+    padding: 1rem 0 0.75rem;
+    margin: 0;
+    @include header(1.5rem, 2rem);
+  }
+
+  &__img {
+    width: 18rem;
+    height: 9.063rem;
+  }
+
+  &__quote {
+    padding: 0.938rem 0 0.625rem;
+    margin: 0;
+    @include header(0.938rem, 1.563rem);
+    &--credit {
+      padding: 0.938rem 0 1.25rem;
+      margin: 0;
+      @include header(0.875rem, 1.563rem);
+    }
+  }
+}
+
+.bio {
+  &__title {
+    @include header(1rem, 1.563rem);
+  }
+
+  &__para {
+    @include paragraph(0.813rem, 1.125rem);
+    text-align: left;
+  }
+}
+
+//About Section for Tablet
+
+@include tablet {
+  .about {
+    padding: 0.938rem 2rem 0.938rem;
+
+    &__title {
+      @include header(1.625rem, 2rem);
+    }
+
+    &__img {
+      width: 45rem;
+      height: 22.625rem;
+      padding: 0.625rem 0;
+      margin-bottom: 0.625rem;
+    }
+
+    &__quote {
+      @include header(1.188rem, 1.563rem);
+      width: 91%;
+      &--credit {
+        @include subheader(1rem, 1.375rem);
+      }
+    }
+  }
+
+  .bio {
+    &__title {
+      @include header(1.25rem, 1.563rem);
+    }
+
+    &__para {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &--one {
+        padding-right: 0.75rem;
+      }
+
+      &--two {
+        padding-left: 0.75rem;
+      }
+    }
+  }
+}
+
+//About Section for Desktop
+
+@include desktop {
+  .about {
+    padding: 0 11.25rem 1.25rem;
+
+    &__title {
+      @include header(2.25rem, 2rem);
+      margin-bottom: 1.875rem;
+      padding: 1.25rem 0 0 0.625rem;
+    }
+
+    &__img {
+      width: 56rem;
+      height: 28.125rem;
+      align-self: center;
+    }
+
+    &__quote {
+      width: 80%;
+      align-self: flex-start;
+      position: relative;
+      padding-left: 5.563rem;
+
+      &--credit {
+        position: relative;
+        padding-left: 5.563rem;
+      }
+    }
+  }
+
+  .bio {
+    &__title {
+      position: relative;
+      padding-left: 5.563rem;
+    }
+
+    &__para {
+      @include paragraph(0.938rem, 1.25rem);
+      &--one {
+        padding-right: 1.25rem;
+        padding-left: 5.563rem;
+      }
+
+      &--two {
+        padding-left: 1.25rem;
+        padding-right: 4.875rem;
+      }
+    }
+  }
+}

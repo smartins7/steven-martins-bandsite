@@ -1,0 +1,55 @@
+//Hero Section for Mobile
+
+.hero {
+  padding: 0 1rem 1.25rem;
+  background-image: linear-gradient($black-gradient),
+    url(/assets/images/concert-1.jpg);
+  width: 100%;
+  height: 11.438rem;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: $white;
+
+  &__slogan {
+    @include header(1.5rem, 2rem);
+    width: 80%;
+  }
+}
+
+//Hero Section for Tablet
+
+@include tablet {
+  .hero {
+    height: 25rem;
+    margin-bottom: 0.625rem;
+
+    &__slogan {
+      @include header(3.75rem, 4.25rem);
+      width: 75%;
+      padding: 0 0 1.563rem 1.5rem;
+      margin: 0;
+    }
+  }
+}
+
+//Hero Section for Desktop
+
+@include desktop {
+  .hero {
+    height: 41.875rem;
+    margin-bottom: 1.5rem;
+
+    &__slogan {
+      @include header(3.75rem, 4.25rem);
+      color: $white;
+      width: 55%;
+      padding: 0 0 4.063rem 11.25rem;
+      margin: 0;
+    }
+  }
+}
