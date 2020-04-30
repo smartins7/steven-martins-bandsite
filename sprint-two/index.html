@@ -20,9 +20,8 @@
               >Biography</a
             >
           </li>
-          <!--Need to add link to shows page when it is ready-->
           <li class="nav-bar__item">
-            <a class="nav-bar__link" href="">Shows</a>
+            <a class="nav-bar__link" href="./pages/shows.html">Shows</a>
           </li>
         </ul>
       </nav>
@@ -126,6 +125,39 @@
         </div>
       </section>
     </main>
+
+    <section class="comments">
+      <h1 class="comments__title">Join the Conversation</h1>
+
+      <form id="comments-form" class="comments-form">
+        <h4 class = comments-form__input-title--name>NAME</h4>
+        <input type="text" id="comments-name-input" class="comments-form__name" placeholder="Mohan Muruge" name="commentsName" />
+        <br/>
+        <h4 class=comments-form__input-title--comment>COMMENT</h4>
+        <textarea type="text" id="comments-content-input" placeholder="Add a new comment" class="comments-form__content"
+          name="commentsContent"></textarea>
+          <br/>
+        <button type="submit" class="comments-form__submit">Comment</button>
+      </form>
+      
+      <form id="comments-filter-form" class="comments-filter-form">
+        <label for="comments-sort-name">Sort by name</label>
+        <input type="checkbox" id="comments-sort-name" />
+        <label for="comments-sort-content">Sort by price, lowest first</label>
+        <input type="checkbox" id="comments-sort-content" />
+      </form>
+      
+      <section class="comments-section">
+        <h2 class="comments-section__title">
+          Comments <span class="comments-section__count"></span>
+        </h2>
+        <ul id="comments-list" class="comments-list"></ul>
+      </section>
+      
+     
+      </section>
+
+    </section>
     <footer class="contact">
       <div class="contact__top">
       <h1 class="contact__title">Get In Touch</h1>
@@ -196,5 +228,6 @@
         Copyright The Bees Knees © 2018 All Rights Reserved
       </h4>
     </footer>
+    <script src="/scripts/comments.js"></script>
   </body>
 </html>
