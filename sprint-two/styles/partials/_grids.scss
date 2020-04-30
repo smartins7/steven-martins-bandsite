@@ -1,0 +1,19 @@
+//Mixins for Gallery Grids
+
+//Gallery Grid for Tablet
+@mixin medium-grid($grid-column-gap, $grid-row-gap) {
+  display: grid;
+  grid-template-columns: 14rem 14rem 14rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: $grid-column-gap;
+  grid-row-gap: $grid-row-gap;
+}
+
+//Gallery Grid for Desktop
+@mixin large-grid($grid-column-gap, $grid-row-gap) {
+  display: grid;
+  grid-template-columns: 20.875rem 20.875rem 20.875rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: $grid-column-gap;
+  grid-row-gap: $grid-row-gap;
+}

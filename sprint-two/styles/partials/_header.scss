@@ -1,0 +1,100 @@
+//Header for Mobile
+
+.nav-bar {
+  background-color: $black;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 1.25rem;
+    padding: 0 5rem;
+    margin-top: 0.813rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__options {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    width: 10rem;
+    @include subheader(0.875rem, 1.375rem);
+    color: $silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.313rem;
+    border-bottom: 0.25rem solid transparent;
+    transition: 0.4s ease;
+
+    &:hover,
+    &--active {
+      cursor: pointer;
+      color: $white;
+      border-bottom: 0.25rem solid $white;
+    }
+  }
+}
+
+//Header for Tablet
+
+@include tablet {
+  .nav-bar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1.563rem 0 0;
+
+    &__logo {
+      width: 19.063rem;
+      padding-left: 1.875rem;
+      margin: 0 0 1rem;
+    }
+
+    &__list {
+      justify-content: space-evenly;
+      align-items: center;
+      width: 45%;
+      padding: 0 0.938rem;
+    }
+
+    &--link {
+      @include subheader(1rem, 1.5rem);
+    }
+  }
+}
+
+//Header for Desktop
+
+@include desktop {
+  .nav-bar {
+    padding: 1.563rem 0 0 11.25rem;
+  }
+}
