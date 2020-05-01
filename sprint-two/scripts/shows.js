@@ -1,45 +1,39 @@
 const shows = [
   {
-    id: 1,
-    Date: "Mon Dec 17 2018",
-    Venue: "Ronald Lane",
-    Location: "San Fancisco, CA",
-    Button: "Buy Tickets",
+    date: "Mon Dec 17 2018",
+    venue: "Ronald Lane",
+    location: "San Fancisco, CA",
+    button: "BUY TICKETS",
   },
   {
-    id: 2,
-    Date: "Tue Jul 18 2019",
-    Venue: "Pier 3 East",
-    Location: "San Fancisco, CA",
-    Button: "Buy Tickets",
+    date: "Tue Jul 18 2019",
+    venue: "Pier 3 East",
+    location: "San Fancisco, CA",
+    button: "BUY TICKETS",
   },
   {
-    id: 3,
-    Date: "Fri Jul 22 2019",
-    Venue: "View Lounge",
-    Location: "San Fancisco, CA",
-    Button: "Buy Tickets",
+    date: "Fri Jul 22 2019",
+    venue: "View Lounge",
+    location: "San Fancisco, CA",
+    button: "BUY TICKETS",
   },
   {
-    id: 4,
-    Date: "Sat Aug 12 2019",
-    Venue: "Hyatt Agency",
-    Location: "San Fancisco, CA",
-    Button: "Buy Tickets",
+    date: "Sat Aug 12 2019",
+    venue: "Hyatt Agency",
+    location: "San Fancisco, CA",
+    button: "BUY TICKETS",
   },
   {
-    id: 5,
-    Date: "Fri Sep 05 2019",
-    Venue: "Moscow Center",
-    Location: "San Fancisco, CA",
-    Button: "Buy Tickets",
+    date: "Fri Sep 05 2019",
+    venue: "Moscow Center",
+    location: "San Fancisco, CA",
+    button: "BUY TICKETS",
   },
   {
-    id: 6,
-    Date: "Wed Aug 11 2019",
-    Venue: "Pres Club",
-    Location: "San Fancisco, CA",
-    Button: "Buy Tickets",
+    date: "Wed Aug 11 2019",
+    venue: "Pres Club",
+    location: "San Fancisco, CA",
+    button: "BUY TICKETS",
   },
 ];
 
@@ -68,8 +62,6 @@ function constructShows(shows) {
     showsConcert.appendChild(venue);
     showsConcert.appendChild(location);
     showsConcert.appendChild(button);
-
-    //Even tried adding the extention names above and didn't work
 
     container.appendChild(showsConcert);
 

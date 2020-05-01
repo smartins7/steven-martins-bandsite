@@ -1,11 +1,9 @@
-// "use strict";   <--what is this?
+// Store DOM elements in variables in order to add eventListeners
 
-// store DOM elements in variables in order to add eventListeners
 const commentsList = document.getElementById("comments-list");
 const commentsForm = document.getElementById("comments-form");
-const commentsCount = document.querySelector(".comments-section__count");
 
-// event listeners
+// Event listeners
 
 commentsForm.addEventListener("submit", displayComment);
 
@@ -30,7 +28,7 @@ const comments = [
   },
 ];
 
-// list comments by looping through comments array and creating dom elements
+// List comments by looping through comments array and creating dom elements
 function listComments(commentArray) {
   commentsList.innerHTML = "";
 
@@ -44,6 +42,9 @@ function listComments(commentArray) {
     const commentsDateVal = comments[i].date;
     const commentsDateElem = document.createElement("h4");
     commentsDateElem.innerText = commentsDateVal;
+    commentsDateElem.innerText = comments[i].date.getMonth();
+    commentsDateElem.innerText += "-" + comments[i].date.getDay();
+    commentsDateElem.innerText += "-" + comments[i].date.getFullYear();
 
     const commentsContentVal = comments[i].content;
     const commentsContentElem = document.createElement("h4");
@@ -54,25 +55,21 @@ function listComments(commentArray) {
     commentItem.appendChild(commentsContentElem);
 
     commentsList.appendChild(commentItem);
-
-    commentsCount.innerText = commentArray.length;
   }
 }
 
-/**
- * create new comment
- */
+// Create new comment
+
 function displayComment(event) {
   event.preventDefault();
   const commentsNameVal = event.target.commentsName.value;
   const commentsContentVal = event.target.commentsContent.value;
-  // const commentsContentVal = new Date();
+  const commentsDateVal = new Date();
   if (commentsNameVal !== "" && commentsContentVal !== "") {
     comments.unshift({
       name: commentsNameVal,
-      //add timestamp here?
+      date: commentsDateVal,
       content: commentsContentVal,
-      // date: commentsDateVal,
     });
     listComments(comments);
   } else {
@@ -80,9 +77,8 @@ function displayComment(event) {
   }
 }
 
-/**
- * Initialize application            //<-- what's this?
- */
-(function init() {
-  listComments(comments);
-})(); // IIFE
+// Initialize application
+
+// (function init() {
+listComments(comments);
+// })();

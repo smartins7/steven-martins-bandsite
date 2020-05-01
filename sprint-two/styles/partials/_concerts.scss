@@ -1,0 +1,129 @@
+//Concert Section for Mobile
+
+.shows {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 2.188rem;
+  margin: 0;
+  color: $black;
+
+  &__title {
+    padding: 1rem 0 0;
+    margin: 0;
+    @include header(1.5rem, 2rem);
+  }
+}
+
+.concert-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+  list-style: none;
+  &__item {
+    border-bottom: 1px solid $mercury;
+    padding: 0.625rem;
+  }
+
+  &__date-wrapper,
+  &__venue-wrapper,
+  &__location-wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1.5rem;
+    }
+  }
+
+  &__date-wrapper::before {
+    content: "Dates";
+  }
+
+  &__venue-wrapper::before {
+    content: "Venue";
+  }
+
+  &__location-wrapper::before {
+    content: "Location";
+  }
+
+  &__date,
+  &__venue,
+  &__location {
+    margin: 2rem 0;
+  }
+
+  &__btn {
+    background-color: $black;
+    color: $white;
+    width: 11.25rem;
+    height: 3.438rem;
+    font-size: 1.313rem;
+    border-radius: 4px;
+    // transition: 0.3s;
+
+    // &:hover {
+    //   background-color: $black-gradient;
+    //   opacity: 1;
+    // }
+  }
+}
+
+// //Concert Section for Tablet
+
+@include tablet {
+  .shows {
+    padding: 0.938rem 2rem 0.938rem;
+
+    &__title {
+      @include header(1.625rem, 2rem);
+    }
+  }
+
+  .concert-list {
+    max-width: 1400px;
+    &__item {
+      display: flex;
+      align-items: baseline;
+      &:first-child {
+        margin-top: 2.25rem;
+        .movie-list__date-wrapper::before,
+        .movie-list__venue-wrapper::before,
+        .movie-list__location-wrapper::before {
+          display: block;
+          top: -2.25rem;
+        }
+      }
+    }
+
+    &__date-wrapper,
+    &__venue-wrapper,
+    &__location-wrapper {
+      width: 50%;
+    }
+    &__date-wrapper::before,
+    &__venue-wrapper::before,                      //Problem somewhere around here?
+    &__location-wrapper::before {
+      display: none;
+    }
+    &__date,
+    &__venue,
+    &__location {
+      margin: 0;
+    }
+  }
+}
+
+//Concert Section for Desktop
+
+@include desktop {
+  .shows {
+    padding: 0 11.25rem 1.25rem;
+
+    &__title {
+      @include header(2.25rem, 2rem);
+      margin-bottom: 1.875rem;
+      padding: 1.25rem 0 0 0.625rem;
+    }
+  }
+}

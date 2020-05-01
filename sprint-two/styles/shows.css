@@ -177,6 +177,127 @@ a {
   }
 }
 
+.shows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1rem 2.188rem;
+  margin: 0;
+  color: #323232;
+}
+
+.shows__title {
+  padding: 1rem 0 0;
+  margin: 0;
+  font-family: Avenir Next Bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.concert-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+  list-style: none;
+}
+
+.concert-list__item {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0.625rem;
+}
+
+.concert-list__date-wrapper, .concert-list__venue-wrapper, .concert-list__location-wrapper {
+  position: relative;
+}
+
+.concert-list__date-wrapper::before, .concert-list__venue-wrapper::before, .concert-list__location-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+}
+
+.concert-list__date-wrapper::before {
+  content: "Dates";
+}
+
+.concert-list__venue-wrapper::before {
+  content: "Venue";
+}
+
+.concert-list__location-wrapper::before {
+  content: "Location";
+}
+
+.concert-list__date, .concert-list__venue, .concert-list__location {
+  margin: 2rem 0;
+}
+
+.concert-list__btn {
+  background-color: #323232;
+  color: #ffffff;
+  width: 11.25rem;
+  height: 3.438rem;
+  font-size: 1.313rem;
+  border-radius: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  .shows {
+    padding: 0.938rem 2rem 0.938rem;
+  }
+  .shows__title {
+    font-family: Avenir Next Bold;
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+  .concert-list {
+    max-width: 1400px;
+  }
+  .concert-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .concert-list__item:first-child {
+    margin-top: 2.25rem;
+  }
+  .concert-list__item:first-child .movie-list__date-wrapper::before,
+  .concert-list__item:first-child .movie-list__venue-wrapper::before,
+  .concert-list__item:first-child .movie-list__location-wrapper::before {
+    display: block;
+    top: -2.25rem;
+  }
+  .concert-list__date-wrapper, .concert-list__venue-wrapper, .concert-list__location-wrapper {
+    width: 50%;
+  }
+  .concert-list__date-wrapper::before, .concert-list__venue-wrapper::before, .concert-list__location-wrapper::before {
+    display: none;
+  }
+  .concert-list__date, .concert-list__venue, .concert-list__location {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .shows {
+    padding: 0 11.25rem 1.25rem;
+  }
+  .shows__title {
+    font-family: Avenir Next Bold;
+    font-size: 2.25rem;
+    line-height: 2rem;
+    margin-bottom: 1.875rem;
+    padding: 1.25rem 0 0 0.625rem;
+  }
+}
+
 .contact {
   background-color: #323232;
   color: #ffffff;
