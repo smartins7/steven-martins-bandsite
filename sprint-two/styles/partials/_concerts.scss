@@ -6,18 +6,15 @@
   color: $black;
 
   &__title {
-    padding: 1rem 0 0;
+    padding: 20px 0 10px 8px;
     margin: 0;
     @include header(1.5rem, 2rem);
-
-    &__container {
-      
   }
 }
 
 .concert-list {
   margin: 0 auto;
-  padding: 0 0 10px 0;
+  padding: 10px 0;
   list-style: none;
   &__item {
     border-bottom: 1px solid $mercury;
@@ -33,35 +30,41 @@
       content: "";
       position: absolute;
       top: -1.5rem;
+      color: $silver;
+      @include subheader(14px, 22px);
     }
   }
 
   &__date-wrapper::before {
-    content: "Dates";
+    content: "DATE";
   }
 
   &__venue-wrapper::before {
-    content: "Venue";
+    content: "VENUE";
   }
 
   &__location-wrapper::before {
-    content: "Location";
+    content: "LOCATION";
   }
 
   &__date,
   &__venue,
   &__location {
     margin: 2rem 0;
+    @include paragraph(14px, 25px);
+  }
+
+  &__date {
+    @include header(16px, 25px);
   }
 
   &__btn {
     background-color: $black;
     color: $white;
-    width: 11.25rem;
+    width: 100%;
     height: 45px; //mixin?
     font-size: 15px;
     border-radius: 4px;
-  
 
     &:hover,
     &:focus {
@@ -81,12 +84,6 @@
     &__title {
       @include header(1.625rem, 2rem);
     }
-  }
-
-  .concert-list-titles {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1400px;
   }
 
   .concert-list {
@@ -113,16 +110,25 @@
     &__date-wrapper::before,
     &__venue-wrapper::before,
     &__location-wrapper::before {
+      @include subheader(16px, 22px);
       display: none;
     }
     &__date,
     &__venue,
     &__location {
       margin: 0;
+      @include paragraph(16px, 25px);
+    }
+
+    &__date {
+      @include header(17px, 25px);
+    }
+
+    &__btn {
+      width: 150px;
     }
   }
 }
-
 //Concert Section for Desktop
 
 @include desktop {
@@ -131,8 +137,13 @@
 
     &__title {
       @include header(2.25rem, 2rem);
-      margin-bottom: 1.875rem;
+      margin-top: 20px;
       padding: 1.25rem 0 0 0.625rem;
+    }
+  }
+  .concert-list {
+    &__item {
+      margin-left: 200px;
     }
   }
 }

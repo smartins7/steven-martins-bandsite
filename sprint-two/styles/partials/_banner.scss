@@ -37,10 +37,10 @@
 
 @include tablet {
   .hero-shows {
-    height: 60vh;
+    height: 80%;
 
     &__container {
-      padding: 10px 0 0 16px;
+      padding: 40px 0 0 16px;
     }
 
     &__album-title {
@@ -65,13 +65,10 @@
 
 @include desktop {
   .hero-shows {
-    height: 50vh;
+    height: 65vh;
 
     &__container {
-      padding: 15px 0 0 11.25rem;
-    }
-
-    &__album-title {
+      padding: 90px 0 0 11.25rem;
     }
 
     &__desktop {
@@ -88,7 +85,7 @@
 
     &__song {
       margin-top: 90px;
-      padding: 0 11.25rem 0 20px;
+      padding: 0 11.25rem 0 40px;
     }
   }
 }

@@ -58,7 +58,7 @@ function listComments(commentArray) {
     const commentsImageVal = comments[i].image;
     const commentsImageElem = document.createElement("img");
     commentsImageElem.innerText = commentsImageVal;
-    commentsImageElem.src = ".././assets/icons/PNG/usericon-grey.png";
+    commentsImageElem.src = "././assets/icons/PNG/grey.png";
     commentsImageElem.setAttribute("width", "45px");
     commentsImageElem.setAttribute("height", "45px");
     commentsImageElem.setAttribute("alt", "User Display Picture");
