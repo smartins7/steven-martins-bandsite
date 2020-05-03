@@ -150,7 +150,8 @@ a {
     padding: 1.563rem 0 0;
   }
   .nav-bar__logo {
-    width: 19.063rem;
+    width: 18.75rem;
+    height: 1.25rem;
     padding-left: 1.875rem;
     margin: 0 0 1rem;
   }
@@ -178,12 +179,11 @@ a {
 }
 
 .hero-shows {
-  max-width: 700px;
   padding: 0 1rem 1.25rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 32, 32, 0.5))), url(.././assets/images/redmoon.jpg);
-  background-image: linear-gradient(rgba(32, 32, 32, 0.5)), url(.././assets/images/redmoon.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 32, 32, 0.5))), url(.././assets/images/dj.jpg);
+  background-image: linear-gradient(rgba(32, 32, 32, 0.5)), url(.././assets/images/dj.jpg);
   width: 100%;
-  height: 11.438rem;
+  height: auto;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -204,46 +204,78 @@ a {
   color: #ffffff;
 }
 
+.hero-shows__album-title {
+  font-family: Avenir Next Demi Bold;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-top: 35px;
+}
+
 .hero-shows__slogan {
   font-family: Avenir Next Bold;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 35px;
+  line-height: 2.5rem;
+  width: 100%;
+  padding-bottom: 25px;
 }
 
 .hero-shows__song {
-  width: 50%;
+  width: 100%;
+  max-width: 600px;
 }
 
 @media only screen and (min-width: 768px) {
   .hero-shows {
-    max-width: 1400px;
-    height: 25rem;
-    margin-bottom: 0.625rem;
+    height: 60vh;
+  }
+  .hero-shows__container {
+    padding: 10px 0 0 16px;
+  }
+  .hero-shows__album-title {
+    font-family: Avenir Next Demi Bold;
+    font-size: 1rem;
+    line-height: 1rem;
   }
   .hero-shows__slogan {
     font-family: Avenir Next Bold;
     font-size: 3.75rem;
     line-height: 4.25rem;
-    width: 75%;
-    padding: 0 0 1.563rem 1.5rem;
+    width: 80%;
+    padding: 0 0 1.563rem;
     margin: 0;
+  }
+  .hero-shows__song {
+    margin-top: 20px;
+    width: 62%;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .hero-shows {
-    max-width: 1600px;
-    height: 600px;
-    margin-bottom: 1.5rem;
+    height: 60vh;
+  }
+  .hero-shows__container {
+    padding: 15px 0 0 11.25rem;
+    margin-top: 70px;
+  }
+  .hero-shows__desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .hero-shows__slogan {
-    font-family: Avenir Next Bold;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
     color: #ffffff;
-    width: 55%;
-    padding: 0 0 4.063rem 11.25rem;
-    margin: 0;
+    width: 48%;
+    padding: 0 0 4.063rem 0;
+    margin-top: 20px;
+  }
+  .hero-shows__song {
+    margin-top: 90px;
+    padding: 0 11.25rem 0 20px;
   }
 }
 
@@ -255,8 +287,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 1rem 2.188rem;
-  margin: 0;
+  padding: 10px 1rem 2.188rem;
   color: #323232;
 }
 
@@ -268,12 +299,11 @@ a {
   line-height: 2rem;
 }
 
-.concert-list-titles {
-  display: none;
+.shows__title__container {
+  height: auto;
 }
 
 .concert-list {
-  max-width: 700px;
   margin: 0 auto;
   padding: 0 0 10px 0;
   list-style: none;
@@ -315,8 +345,8 @@ a {
   background-color: #323232;
   color: #ffffff;
   width: 11.25rem;
-  height: 3.438rem;
-  font-size: 1.313rem;
+  height: 45px;
+  font-size: 15px;
   border-radius: 4px;
 }
 

@@ -50,10 +50,19 @@ function listComments(commentArray) {
     const commentsDateVal = comments[i].date;
     const commentsDateElem = document.createElement("h4");
     commentsDateElem.innerText = commentsDateVal;
-    // commentsDateElem.innerText = comments[i].date.getMonth();
-    // commentsDateElem.innerText += "-" + comments[i].date.getDay();
-    // commentsDateElem.innerText += "-" + comments[i].date.getFullYear();
     commentsItem.classList.add("comments-list__date");
+
+    const commentsImageWrapper = document.createElement("div");
+    commentsImageWrapper.classList.add("comments-list__image-wrapper");
+
+    const commentsImageVal = comments[i].image;
+    const commentsImageElem = document.createElement("img");
+    commentsImageElem.innerText = commentsImageVal;
+    commentsImageElem.src = ".././assets/icons/PNG/usericon-grey.png";
+    commentsImageElem.setAttribute("width", "45px");
+    commentsImageElem.setAttribute("height", "45px");
+    commentsImageElem.setAttribute("alt", "User Display Picture");
+    commentsItem.classList.add("comments-list__image");
 
     const commentsContentWrapper = document.createElement("div");
     commentsContentWrapper.classList.add("comments-list__content-wrapper");
@@ -63,16 +72,6 @@ function listComments(commentArray) {
     commentsContentElem.innerText = commentsContentVal;
     commentsItem.classList.add("comments-list__content");
 
-    const commentsImageWrapper = document.createElement("div");
-    commentsImageWrapper.classList.add("comments-list__image-wrapper");
-
-    const commentsImageVal = comments[i].image;
-    const commentsImageElem = document.createElement("img");
-    commentsImageElem.innerText = commentsImageVal;
-    commentsImageElem.src = ".././assets/icons/PNG/usericon-grey.png";
-    commentsImageElem.setAttribute("alt", "User Display Picture");
-    commentsItem.classList.add("comments-list__image");
-
     //Adding the h2 to the wrapper div
     commentsNameWrapper.appendChild(commentsNameElem);
     commentsItem.appendChild(commentsNameWrapper);
@@ -81,12 +80,13 @@ function listComments(commentArray) {
     commentsDateWrapper.appendChild(commentsDateElem);
     commentsItem.appendChild(commentsDateWrapper);
 
+    //Adding the img to the wrapper div
+    commentsImageWrapper.appendChild(commentsImageElem);
+    commentsItem.appendChild(commentsImageWrapper);
+
     //Adding the h4 to the wrapper div
     commentsContentWrapper.appendChild(commentsContentElem);
     commentsItem.appendChild(commentsContentWrapper);
-
-    commentsImageWrapper.appendChild(commentsImageElem);
-    commentsItem.appendChild(commentsImageWrapper);
 
     commentsList.appendChild(commentsItem);
   }
@@ -99,7 +99,7 @@ function displayComment(event) {
   const commentsNameVal = event.target.commentsName.value;
   const commentsContentVal = event.target.commentsContent.value;
   //don't know if i like this below
-  const commentsDateVal = new Date();
+  const commentsDateVal = "Just Now";
   if (commentsNameVal !== "" && commentsContentVal !== "") {
     comments.unshift({
       name: commentsNameVal,

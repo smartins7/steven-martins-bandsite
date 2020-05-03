@@ -1,12 +1,11 @@
 //Hero for Shows Section for Mobile
 
 .hero-shows {
-  max-width: 700px;
   padding: 0 1rem 1.25rem;
   background-image: linear-gradient($black-gradient),
-    url(.././assets/images/redmoon.jpg);
+    url(.././assets/images/dj.jpg);
   width: 100%;
-  height: 11.438rem;
+  height: auto;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -18,14 +17,19 @@
   color: $white;
 
   &__album-title {
+    @include subheader(0.75rem, 1rem);
+    padding-top: 35px;
   }
 
   &__slogan {
-    @include header(1.5rem, 2rem);
+    @include header(35px, 2.5rem);
+    width: 100%;
+    padding-bottom: 25px;
   }
 
   &__song {
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
   }
 }
 
@@ -33,18 +37,26 @@
 
 @include tablet {
   .hero-shows {
-    max-width: 1400px;
-    height: 25rem;
-    margin-bottom: 0.625rem;
+    height: 60vh;
+
+    &__container {
+      padding: 10px 0 0 16px;
+    }
 
     &__album-title {
+      @include subheader(1rem, 1rem);
     }
 
     &__slogan {
       @include header(3.75rem, 4.25rem);
-      width: 75%;
-      padding: 0 0 1.563rem 1.5rem;
+      width: 80%;
+      padding: 0 0 1.563rem;
       margin: 0;
+    }
+
+    &__song {
+      margin-top: 20px;
+      width: 62%;
     }
   }
 }
@@ -53,19 +65,30 @@
 
 @include desktop {
   .hero-shows {
-    max-width: 1600px;
-    height: 600px;
-    margin-bottom: 1.5rem;
+    height: 50vh;
+
+    &__container {
+      padding: 15px 0 0 11.25rem;
+    }
 
     &__album-title {
     }
 
+    &__desktop {
+      display: flex;
+      flex-direction: row;
+    }
+
     &__slogan {
-      @include header(3.75rem, 4.25rem);
       color: $white;
-      width: 55%;
-      padding: 0 0 4.063rem 11.25rem;
+      width: 48%;
+      padding: 0 0 4.063rem 0;
       margin: 0;
+    }
+
+    &__song {
+      margin-top: 90px;
+      padding: 0 11.25rem 0 20px;
     }
   }
 }

@@ -1,25 +1,21 @@
 //Concert Section for Mobile
-
 .shows {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem 2.188rem;
-  margin: 0;
+  padding: 10px 1rem 2.188rem;
   color: $black;
 
   &__title {
     padding: 1rem 0 0;
     margin: 0;
     @include header(1.5rem, 2rem);
+
+    &__container {
+      
   }
 }
 
-.concert-list-titles {
-  display: none;
-}
-
 .concert-list {
-  max-width: 700px;
   margin: 0 auto;
   padding: 0 0 10px 0;
   list-style: none;
@@ -62,9 +58,10 @@
     background-color: $black;
     color: $white;
     width: 11.25rem;
-    height: 3.438rem;
-    font-size: 1.313rem;
+    height: 45px; //mixin?
+    font-size: 15px;
     border-radius: 4px;
+  
 
     &:hover,
     &:focus {

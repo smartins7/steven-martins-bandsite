@@ -128,19 +128,21 @@
 
     <section class="comments">
       <h1 class="comments__title">Join the Conversation</h1>
+      <div class="comments__container">
       <form id="comments-form" class="comments-form">
-        <img class="comments-form__display-picture" src="./assets/icons/PNG/userico.png" alt="User Display Picture"/>
-        <label>
-        <h4 class = comments-form__input-title--name>NAME</h4></label>
+        <label class = comments-form__input-title--name>NAME</label>
+        <div class="comments-form__row-one">
+        <img class="comments-form__display-picture" src="./assets/icons/PNG/userico.png" alt="User Display Picture" />
         <input type="text" id="comments-name-input" class="comments-form__name" placeholder="Enter your name" name="commentsName" />
+        </div>
         <br/>
-        <label>
-        <h4 class=comments-form__input-title--comment>COMMENT</h4></label>
+        <label class=comments-form__input-title--comment>COMMENT</label>
         <textarea type="text" id="comments-content-input" placeholder="Add a new comment" class="comments-form__content"
           name="commentsContent"></textarea>
           <br/>
-        <button type="submit" class="comments-form__submit">Comment</button>
+        <button type="submit" class="comments-form__submit">COMMENT</button>
       </form>
+      </div>
           <ul id="comments-list" class="comments-list"></ul>
     
     </section>

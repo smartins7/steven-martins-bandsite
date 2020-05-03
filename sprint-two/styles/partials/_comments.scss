@@ -1,20 +1,202 @@
-.comments-list {
+//Comments section for mobile
+.comments {
+  padding: 0.938rem 1.5rem 1.5rem;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  &__title {
+    @include header(1.5rem, 1rem);
+  }
 }
-// .comments-list__name-wrapper {
-//   color: $silver;
-// }
 
-// .comments-list__date-wrapper {
-//   color: $silver;
-// }
+.comments-form {
+  display: flex;
+  flex-direction: column;
 
-// .comments-list__content-wrapper {
-//   color: $silver;
-//   padding-left: 1000px;
-// }
+  &__row-one {
+    display: flex;
+    flex-direction: row;
+  }
 
-// .comments-list__image-wrapper {
-//   padding-left: 1000px;
-// }
+  &__display-picture {
+    height: 45px;
+    width: 45px;
+  }
+
+  &__input-title--name,
+  &__input-title--comment {
+    padding: 0 0 3px 55px;
+    @include subheader(10px, 1rem);
+    color: $silver;
+  }
+
+  &__name {
+    background-color: $alabaster;
+    border: 1px solid $silver;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+
+    &:focus {
+      border-color: $black;
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  &__content {
+    background-color: $alabaster;
+    border: 1px solid $silver;
+    height: 80px;
+    padding: 10px 0 0 10px;
+    margin-left: 55px;
+    width: auto;
+
+    &:focus {
+      border-color: $black;
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  &__submit {
+    background-color: $black;
+    color: $white;
+    width: 11.25rem;
+    height: 45px; //mixin?
+    font-size: 14px;
+    border-radius: 4px;
+
+    margin-left: 55px;
+    width: auto;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: darken($white, 10%);
+    }
+    // Do you like the above affect?
+  }
+}
+
+.comments-list {
+  padding: 0;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: 1px solid $mercury;
+    border-bottom: 1px solid $mercury;
+    padding: 10px 0;
+  }
+
+  &__name-wrapper {
+    @include subheader(10px, 12px);
+    margin: 0;
+    padding-left: 55px;
+  }
+
+  &__date-wrapper {
+    @include paragraph(10px, 10px);
+    color: $silver;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    margin-top: -40px;
+  }
+
+  &__content-wrapper {
+    width: 100%;
+    margin: 0;
+    padding-left: 55px;
+    @include paragraph(13px, 18px);
+  }
+}
+
+//Comments section for Tablet
+@include tablet {
+  .comments {
+    padding: 0.313rem 1.5rem 1.875rem;
+    margin: 0;
+
+    &__title {
+      @include header(1.625rem, 2rem);
+      padding: 0.75rem 0 1.25rem;
+    }
+    &__container {
+      padding: 0 80px 10px;
+    }
+  }
+  .comments-form {
+    &__input-title--name,
+    &__input-title--comment {
+      @include subheader(12px, 1rem);
+    }
+
+    &__submit {
+      width: 150px;
+      margin-left: 415px;
+    }
+  }
+
+  .comments-list {
+    padding: 0 80px;
+
+    &__name-wrapper {
+      @include subheader(14px, 12px);
+    }
+    &__date-wrapper {
+      @include paragraph(12px, 10px);
+      padding-top: 3px;
+      margin-left: 20px;
+    }
+    &__content-wrapper {
+      @include paragraph(15px, 18px);
+    }
+  }
+}
+
+//Comments section for Desktop
+@include desktop {
+  .comments {
+    padding: 1.25rem 11.25rem 2.188rem;
+    margin: 0;
+
+    &__title {
+      @include header(2.25rem, 2rem);
+    }
+    &__container {
+      padding: 0 280px;
+    }
+  }
+  .comments-form {
+    &__input-title--name,
+    &__input-title--comment {
+      @include subheader(14px, 1rem);
+    }
+
+    &__submit {
+      width: 150px;
+      margin-left: 375px;
+    }
+  }
+
+  .comments-list {
+    padding: 0 270px;
+
+    &__name-wrapper {
+      @include subheader(16px, 12px);
+    }
+    &__date-wrapper {
+      @include paragraph(14px, 10px);
+    }
+    &__content-wrapper {
+      @include paragraph(17px, 18px);
+    }
+  }
+}
