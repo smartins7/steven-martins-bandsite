@@ -19,24 +19,24 @@
   }
 
   &__display-picture {
-    height: 45px;
-    width: 45px;
+    height: 2.813rem;
+    width: 2.813rem;
   }
 
   &__input-title--name,
   &__input-title--comment {
-    padding: 0 0 3px 55px;
-    @include subheader(10px, 1rem);
+    padding: 0 0 0.188rem 3.438rem;
+    @include subheader(0.625rem, 1rem);
     color: $silver;
   }
 
   &__name {
     background-color: $alabaster;
-    border: 1px solid $silver;
-    height: 40px;
+    border: 0.063rem solid $silver;
+    height: 2.5rem;
     width: 100%;
-    padding: 10px;
-    margin-left: 10px;
+    padding: 0.625rem;
+    margin-left: 0.625rem;
 
     &:focus {
       border-color: $black;
@@ -47,10 +47,10 @@
 
   &__content {
     background-color: $alabaster;
-    border: 1px solid $silver;
-    height: 80px;
-    padding: 10px 0 0 10px;
-    margin-left: 55px;
+    border: 0.063rem solid $silver;
+    height: 5rem;
+    padding: 0.625rem 0 0 0.625rem;
+    margin-left: 3.438rem;
     width: auto;
 
     &:focus {
@@ -61,22 +61,14 @@
   }
 
   &__submit {
-    background-color: $black;
-    color: $white;
-    width: 11.25rem;
-    height: 45px; //mixin?
-    font-size: 14px;
-    border-radius: 4px;
-
-    margin-left: 55px;
-    width: auto;
+    @include button(auto);
+    margin-left: 3.438rem;
 
     &:hover,
     &:focus {
       cursor: pointer;
       color: darken($white, 10%);
     }
-    // Do you like the above affect?
   }
 }
 
@@ -87,19 +79,19 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    border-top: 1px solid $mercury;
-    border-bottom: 1px solid $mercury;
-    padding: 10px 0;
+    border-top: 0.063rem solid $mercury;
+    border-bottom: 0.063rem solid $mercury;
+    padding: 0.625rem 0;
   }
 
   &__name-wrapper {
-    @include subheader(10px, 12px);
+    @include subheader(0.625rem, 0.75rem);
     margin: 0;
-    padding-left: 55px;
+    padding-left: 3.438rem;
   }
 
   &__date-wrapper {
-    @include paragraph(10px, 10px);
+    @include paragraph(0.625rem, 0.625rem);
     color: $silver;
     margin: 0;
     margin-left: auto;
@@ -107,14 +99,14 @@
 
   &__image-wrapper {
     width: 100%;
-    margin-top: -40px;
+    margin-top: -2.5rem;
   }
 
   &__content-wrapper {
     width: 100%;
     margin: 0;
-    padding-left: 55px;
-    @include paragraph(13px, 18px);
+    padding-left: 3.438rem;
+    @include paragraph(0.875rem, 1.125rem);
   }
 }
 
@@ -129,34 +121,34 @@
       padding: 0.75rem 0 1.25rem;
     }
     &__container {
-      padding: 0 80px 10px;
+      padding: 0 5rem 0.625rem;
     }
   }
   .comments-form {
     &__input-title--name,
     &__input-title--comment {
-      @include subheader(12px, 1rem);
+      @include subheader(0.75rem, 1rem);
     }
 
     &__submit {
-      width: 150px;
-      margin-left: 415px;
+      width: 9.375rem;
+      margin-left: 25.938rem;
     }
   }
 
   .comments-list {
-    padding: 0 80px;
+    padding: 0 5rem;
 
     &__name-wrapper {
-      @include subheader(14px, 12px);
+      @include subheader(0.875rem, 0.75rem);
     }
     &__date-wrapper {
-      @include paragraph(12px, 10px);
-      padding-top: 3px;
-      margin-left: 20px;
+      @include paragraph(0.75rem, 0.625rem);
+      padding-top: 0.188rem;
+      margin-left: 1.25rem;
     }
     &__content-wrapper {
-      @include paragraph(15px, 18px);
+      @include paragraph(0.938rem, 1.5rem);
     }
   }
 }
@@ -171,32 +163,32 @@
       @include header(2.25rem, 2rem);
     }
     &__container {
-      padding: 0 280px;
+      padding: 0 17.5rem;
     }
   }
   .comments-form {
     &__input-title--name,
     &__input-title--comment {
-      @include subheader(14px, 1rem);
+      @include subheader(0.875rem, 1rem);
     }
 
     &__submit {
-      width: 150px;
-      margin-left: 375px;
+      width: 9.375rem;
+      margin-left: 23.438rem;
     }
   }
 
   .comments-list {
-    padding: 0 270px;
+    padding: 0 16.875rem;
 
     &__name-wrapper {
-      @include subheader(16px, 12px);
+      @include subheader(1rem, 0.75rem);
     }
     &__date-wrapper {
-      @include paragraph(14px, 10px);
+      @include paragraph(0.875rem, 0.625rem);
     }
     &__content-wrapper {
-      @include paragraph(17px, 18px);
+      @include paragraph(1.063rem, 1.5rem);
     }
   }
 }

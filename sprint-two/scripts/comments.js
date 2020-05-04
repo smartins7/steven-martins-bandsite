@@ -29,6 +29,7 @@ const comments = [
 ];
 
 // List comments by looping through comments array and creating dom elements
+
 function listComments(commentArray) {
   commentsList.innerHTML = "";
 
@@ -98,7 +99,6 @@ function displayComment(event) {
   event.preventDefault();
   const commentsNameVal = event.target.commentsName.value;
   const commentsContentVal = event.target.commentsContent.value;
-  //don't know if i like this below
   const commentsDateVal = "Just Now";
   if (commentsNameVal !== "" && commentsContentVal !== "") {
     comments.unshift({
@@ -113,8 +113,4 @@ function displayComment(event) {
   }
 }
 
-// Initialize application
-
-// (function init() {
 listComments(comments);
-// })();

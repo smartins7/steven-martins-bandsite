@@ -18,18 +18,18 @@
 
   &__album-title {
     @include subheader(0.75rem, 1rem);
-    padding-top: 35px;
+    padding-top: 2.188rem;
   }
 
   &__slogan {
-    @include header(35px, 2.5rem);
+    @include header(2.188rem, 2.5rem);
     width: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 1.563rem;
   }
 
   &__song {
     width: 100%;
-    max-width: 600px;
+    max-width: 37.5rem;
   }
 }
 
@@ -40,7 +40,7 @@
     height: 80%;
 
     &__container {
-      padding: 40px 0 0 16px;
+      padding: 2.5rem 0 0 1rem;
     }
 
     &__album-title {
@@ -55,7 +55,7 @@
     }
 
     &__song {
-      margin-top: 20px;
+      margin-top: 1.25rem;
       width: 62%;
     }
   }
@@ -68,7 +68,7 @@
     height: 65vh;
 
     &__container {
-      padding: 90px 0 0 11.25rem;
+      padding: 5.625rem 0 0 11.25rem;
     }
 
     &__desktop {
@@ -84,8 +84,8 @@
     }
 
     &__song {
-      margin-top: 90px;
-      padding: 0 11.25rem 0 40px;
+      margin-top: 5.625rem;
+      padding: 0 11.25rem 0 2.5rem;
     }
   }
 }

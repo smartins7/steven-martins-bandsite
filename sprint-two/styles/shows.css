@@ -109,7 +109,7 @@ a {
 }
 
 .nav-bar__link {
-  width: 10rem;
+  width: 5rem;
   font-family: Avenir Next Demi Bold;
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -117,9 +117,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -147,7 +147,7 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
     text-align: left;
-    padding: 1.563rem 0 0;
+    padding: 1.875rem 0 0;
   }
   .nav-bar__logo {
     width: 18.75rem;
@@ -174,7 +174,7 @@ a {
 
 @media only screen and (min-width: 1440px) {
   .nav-bar {
-    padding: 1.563rem 0 0 11.25rem;
+    padding: 2.188rem 0 0 11.25rem;
   }
 }
 
@@ -208,20 +208,20 @@ a {
   font-family: Avenir Next Demi Bold;
   font-size: 0.75rem;
   line-height: 1rem;
-  padding-top: 35px;
+  padding-top: 2.188rem;
 }
 
 .hero-shows__slogan {
   font-family: Avenir Next Bold;
-  font-size: 35px;
+  font-size: 2.188rem;
   line-height: 2.5rem;
   width: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 1.563rem;
 }
 
 .hero-shows__song {
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -229,7 +229,7 @@ a {
     height: 80%;
   }
   .hero-shows__container {
-    padding: 40px 0 0 16px;
+    padding: 2.5rem 0 0 1rem;
   }
   .hero-shows__album-title {
     font-family: Avenir Next Demi Bold;
@@ -245,7 +245,7 @@ a {
     margin: 0;
   }
   .hero-shows__song {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 62%;
   }
 }
@@ -255,7 +255,7 @@ a {
     height: 65vh;
   }
   .hero-shows__container {
-    padding: 90px 0 0 11.25rem;
+    padding: 5.625rem 0 0 11.25rem;
   }
   .hero-shows__desktop {
     display: -webkit-box;
@@ -273,8 +273,8 @@ a {
     margin: 0;
   }
   .hero-shows__song {
-    margin-top: 90px;
-    padding: 0 11.25rem 0 40px;
+    margin-top: 5.625rem;
+    padding: 0 11.25rem 0 2.5rem;
   }
 }
 
@@ -286,12 +286,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px 1rem 2.188rem;
+  padding: 0.625rem 1rem 2.188rem;
   color: #323232;
 }
 
 .shows__title {
-  padding: 20px 0 10px 8px;
+  padding: 1.25rem 0 0.625rem 0.5rem;
   margin: 0;
   font-family: Avenir Next Bold;
   font-size: 1.5rem;
@@ -300,12 +300,12 @@ a {
 
 .concert-list {
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   list-style: none;
 }
 
 .concert-list__item {
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 0.063rem solid #e1e1e1;
   padding: 0.625rem;
   list-style-type: none;
 }
@@ -320,8 +320,8 @@ a {
   top: -1.5rem;
   color: #afafaf;
   font-family: Avenir Next Demi Bold;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .concert-list__date-wrapper::before {
@@ -339,23 +339,23 @@ a {
 .concert-list__date, .concert-list__venue, .concert-list__location {
   margin: 2rem 0;
   font-family: Avenir Next Regular;
-  font-size: 14px;
-  line-height: 25px;
+  font-size: 0.875rem;
+  line-height: 1.563rem;
 }
 
 .concert-list__date {
   font-family: Avenir Next Bold;
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 1rem;
+  line-height: 1.563rem;
 }
 
 .concert-list__btn {
   background-color: #323232;
   color: #ffffff;
-  width: 100%;
   height: 45px;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 4px;
+  width: 100%;
 }
 
 .concert-list__btn:hover, .concert-list__btn:focus {
@@ -373,7 +373,7 @@ a {
     line-height: 2rem;
   }
   .concert-list {
-    max-width: 1400px;
+    max-width: 87.5rem;
   }
   .concert-list__item {
     display: -webkit-box;
@@ -397,23 +397,23 @@ a {
   }
   .concert-list__date-wrapper::before, .concert-list__venue-wrapper::before, .concert-list__location-wrapper::before {
     font-family: Avenir Next Demi Bold;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 1.375rem;
     display: none;
   }
   .concert-list__date, .concert-list__venue, .concert-list__location {
     margin: 0;
     font-family: Avenir Next Regular;
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 1rem;
+    line-height: 1.563rem;
   }
   .concert-list__date {
     font-family: Avenir Next Bold;
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 1.063rem;
+    line-height: 1.563rem;
   }
   .concert-list__btn {
-    width: 150px;
+    width: 9.375rem;
   }
 }
 
@@ -425,11 +425,11 @@ a {
     font-family: Avenir Next Bold;
     font-size: 2.25rem;
     line-height: 2rem;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     padding: 1.25rem 0 0 0.625rem;
   }
   .concert-list__item {
-    margin-left: 200px;
+    margin-left: 12.5rem;
   }
 }
 

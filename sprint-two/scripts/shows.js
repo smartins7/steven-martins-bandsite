@@ -39,7 +39,7 @@ const shows = [
 
 console.table(shows);
 
-const container = document.querySelector(".container");
+const container = document.querySelector(".shows_container");
 
 function constructShows(shows) {
   for (show of shows) {
