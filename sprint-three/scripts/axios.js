@@ -141,6 +141,45 @@
 
 // console.log(showPromise);
 
+// // Comments
+// // Get
+// // https://project-1-api.herokuapp.com/comments?api_key=steven
+
+const createComments = (input) => {
+  const commentsText = document.createElement("li");
+  commentsText.textContent = input;
+  commentsText.className = "comments-list__item";
+  return commentsText;
+};
+
+const commentsList = document.querySelector(".comments__container");
+const generateComments = (input) => {
+  container.appendChild(createComments(input));
+
+  const loadComments = () => {
+    axios
+      .get("https:project-1-api.herokuapp.com/comments?api_key=steven", {
+        headers: {
+          Accept: "text/plain",
+        },
+      })
+      .then((response) => {
+        const commentsArray = response.data;
+        generateShow(`"${commentsArray}"`);
+        // `"${index + 1} ${comments.name} ${comments.comment}"`);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  loadComments();
+
+  //do the same for PUT?
+
+// // Shows
+// // Get
+// // https://project-1-api.herokuapp.com/showdates?api_key=steven
+
+
 const createShow = (input) => {
   const showText = document.createElement("li");
   showText.textContent = input;
