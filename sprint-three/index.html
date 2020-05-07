@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>BANDSITE</title>
+  </head>
+  <body>
+    <!--Header/Navigation Section-->
+    <header class="nav-bar" id="nav-bar">
+      <a class="nav-bar__logo-link" href="index.html"><img
+        class="nav-bar__logo"
+        src="./assets/logos/Logo/bandsite-logo-new.svg"
+        alt="BANDSITE Logo"
+      />
+      <nav class="nav-bar__options">
+        <ul class="nav-bar__list">
+          <li class="nav-bar__item">
+            <a class="nav-bar__link nav-bar__link--active" href="index.html"
+              >Biography</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a class="nav-bar__link" href="./pages/shows.html">Shows</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+<!--Hero Banner Sections-->
+    <main>
+      <section class="hero">
+        <h1 class="hero__slogan">Gaspard Auge & Xavier de Rosnay</h1>
+      </section>
+<!--About Section-->
+      <section class="about">
+        <h1 class="about__title">About The Musicians</h1>
+        <img
+          class="about__img"
+          src="./assets/images/aboutimage.jpg"
+          alt="Band Photo"
+        />
+        <h2 class="about__quote">
+          "We are more comfortable with not fighting what comes naturally.
+          Before we might have thought, 'We need to be smarter that this'"
+        </h2>
+        <h4 class="about__quote--credit">-Xavier de Rosnay</h4>
+
+        <div class="bio">
+          <h2 class="bio__title">Xavier de Rosnay & Gaspard Auge</h2>
+          <div class="bio__para">
+            <h4 class="bio__para--one">
+              Xavier De Rosnay and Gaspard Auge had a few mutual friends, who
+              happened to run a record label, seeking tracks for a compilation.
+              With an immediate connection, the pair decided to try their hand
+              at making a song. That's when they created their breakout single,
+              We Are Your Friends - a feel good, funk-filled, instant anthem
+              that lost the remix contest, but won the attention of Pedro
+              Winter, director of newly founded Ed Banger Records, who boasted
+              Daft Punk as former clients. One week later, they were in his
+              office signing a record deal.
+            </h4>
+            <h4 class="bio__para--two">
+              Xavier De Rosnay and Gaspard Auge had a few mutual friends, who
+              happened to run a record label, seeking tracks for a compilation.
+              With an immediate connection, the pair decided to try their hand
+              at making a song. That's when they created their breakout single,
+              We Are Your Friends - a feel good, funk-filled, instant anthem
+              that lost the remix contest, but won the attention of Pedro
+              Winter, director of newly founded Ed Banger Records, who boasted
+              Daft Punk as former clients. One week later, they were in his
+              office signing a record deal.
+            </h4>
+          </div>
+        </div>
+      </section>
+<!--Gallery Section-->
+      <section class="gallery">
+        <h1 class="gallery__title">Photo Gallery</h1>
+        <div class="gallery__items">
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-1.jpg"
+            alt="Gallery Photo One"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-2.jpg"
+            alt="Gallery Photo Two"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-3.jpg"
+            alt="Gallery Photo Three"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-4.jpg"
+            alt="Gallery Photo Four"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-5.jpg"
+            alt="Gallery Photo Five"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-6.jpg"
+            alt="Gallery Photo Six"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-7.jpg"
+            alt="Gallery Photo Seven"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-8.jpg"
+            alt="Gallery Photo Eight"
+          />
+          <img
+            class="gallery__items--photo"
+            src="./assets/images/Photo-gallery-9.jpg"
+            alt="Gallery Photo Nine"
+          />
+        </div>
+      </section>
+    </main>
+<!--Comments Section-->
+    <section class="comments">
+      <h1 class="comments__title">Join the Conversation</h1>
+      <div class="comments__container">
+      <form id="comments-form" class="comments-form">
+        <label class = comments-form__input-title--name>NAME</label>
+        <div class="comments-form__row-one">
+        <img class="comments-form__display-picture" src="./assets/icons/PNG/userico.png" alt="User Display Picture" />
+        <input type="text" id="comments-name-input" class="comments-form__name" placeholder="Enter your name" name="commentsName" />
+        </div>
+        <br/>
+        <label class=comments-form__input-title--comment>COMMENT</label>
+        <textarea type="text" id="comments-content-input" placeholder="Add a new comment" class="comments-form__content"
+          name="commentsContent"></textarea>
+          <br/>
+        <button type="submit" class="comments-form__submit">COMMENT</button>
+      </form>
+      </div>
+      <!--Added this section with Javascript-->
+          <ul id="comments-list" class="comments-list"></ul>
+    </section>
+    <!--Footer Section-->
+    <footer class="contact">
+      <div class="contact__top">
+      <h1 class="contact__title">Get In Touch</h1>
+      <div class="contact__social-logos">
+        <a href="https://www.instagram.com/" target="_blank"
+          ><img
+            class="contact__social-logos--icon"
+            src="./assets/icons/SVG/Icon-instagram.svg"
+            alt="Instagram Logo"
+        /></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><img
+            class="contact__social-logos--icon"
+            src="./assets/icons/SVG/Icon-facebook.svg"
+            alt="Facebook Logo"
+        /></a>
+        <a href="https://www.twitter.com/" target="_blank"
+          ><img
+            class="contact__social-logos--icon"
+            src="./assets/icons/SVG/Icon-twitter.svg"
+            alt="Twitter Logo"
+        /></a>
+      </div>
+      <a class="contact__logo-link" href="#nav-bar">
+      <div class="contact__logo">
+        <img
+          class="contact__logo--bandsite"
+          src="./assets/logos/Logo/bandsite-logo-new.svg"
+          alt="BANDSITE Logo"
+        /></a>
+        </div>
+      </div>
+      <div class="contact__info">
+        <div class="contact__info--richard">
+          <h2 class="contact__info--name">
+            Richard Rovner <br />
+            The Bees Knees Management
+          </h2>
+          <h4 class="contact__info--address">
+            460 King Street West <br />
+            Toronto, Ontario M5V 1L7
+          </h4>
+          <a href="mailto:info@thebeesknees.com"><h4 class="contact__info--email">info@thebeesknees.com</h4></a>
+        </div>
+        <div class="contact__info--marsha">
+          <h2 class="contact__info--name">
+            Marsha Vlasic <br />
+            Artist Group International
+          </h2>
+          <h4 class="contact__info--address">
+            Booking Agent for <br />
+            US / South America / Japan
+          </h4>
+          <a href="mailto:marsha.vlasic@artistgrp.com"><h4 class="contact__info--email">marsha.vlasic@artistgrp.com</h4></a>
+        </div>
+        <div class="contact__info--russel">
+        <h2 class="contact__info--name">
+          Russel Warby <br />
+          William Morrir Entertainment
+        </h2>
+        <h4 class="contact__info--address">
+          Booking Agent for <br />
+          UK / EU / AU
+        </h4>
+        <a href="mailto:RLW@wmeentertainment.com"><h4 class="contact__info--email">RLW@wmeentertainment.com</h4></a>
+      </div>
+      <h4 class="contact__copyright">
+        Copyright The Bees Knees © 2018 All Rights Reserved
+      </h4>
+    </footer>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="./scripts/axios.js"></script>  -->
+    <script src="./scripts/comments.js"></script>
+  </body>
+</html>

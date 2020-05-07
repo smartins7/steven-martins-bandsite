@@ -1,0 +1,10 @@
+//Buttons for Comments and Shows Sections
+
+@mixin button($width) {
+  background-color: $black;
+  color: $white;
+  height: 45px;
+  font-size: 14px;
+  border-radius: 4px;
+  width: $width;
+}

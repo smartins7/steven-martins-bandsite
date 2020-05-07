@@ -1,0 +1,91 @@
+//Hero for Shows Section for Mobile
+
+.hero-shows {
+  padding: 0 1rem 1.25rem;
+  background-image: linear-gradient($black-gradient),
+    url(.././assets/images/dj.jpg);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  color: $white;
+
+  &__album-title {
+    @include subheader(0.75rem, 1rem);
+    padding-top: 2.188rem;
+  }
+
+  &__slogan {
+    @include header(2.188rem, 2.5rem);
+    width: 100%;
+    padding-bottom: 1.563rem;
+  }
+
+  &__song {
+    width: 100%;
+    max-width: 37.5rem;
+  }
+}
+
+//Hero for Shows Section for Tablet
+
+@include tablet {
+  .hero-shows {
+    height: 80%;
+
+    &__container {
+      padding: 2.5rem 0 0 1rem;
+    }
+
+    &__album-title {
+      @include subheader(1rem, 1rem);
+    }
+
+    &__slogan {
+      @include header(3.75rem, 4.25rem);
+      width: 80%;
+      padding: 0 0 1.563rem;
+      margin: 0;
+    }
+
+    &__song {
+      margin-top: 1.25rem;
+      width: 62%;
+    }
+  }
+}
+
+//Hero for Shows Section for Desktop
+
+@include desktop {
+  .hero-shows {
+    height: 65vh;
+
+    &__container {
+      padding: 5.625rem 0 0 11.25rem;
+    }
+
+    &__desktop {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__slogan {
+      color: $white;
+      width: 48%;
+      padding: 0 0 4.063rem 0;
+      margin: 0;
+    }
+
+    &__song {
+      margin-top: 5.625rem;
+      padding: 0 11.25rem 0 2.5rem;
+    }
+  }
+}
