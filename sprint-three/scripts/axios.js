@@ -201,6 +201,7 @@ const loadShows = () => {
     .then((response) => {
       const showsArray = response.data;
       generateShow(`"${showsArray}"`);
+      // input = response.data.all;
         // `"${index + 1} ${show.date} ${show.place} ${show.location}"`);
     })
     .catch((err) => console.log(err));
