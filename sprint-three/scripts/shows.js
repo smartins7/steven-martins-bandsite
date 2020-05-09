@@ -1,43 +1,19 @@
-const shows = [
-  {
-    date: "Mon Dec 17 2018",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-    button: "BUY TICKETS",
-  },
-  {
-    date: "Tue Jul 18 2019",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-    button: "BUY TICKETS",
-  },
-  {
-    date: "Fri Jul 22 2019",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-    button: "BUY TICKETS",
-  },
-  {
-    date: "Sat Aug 12 2019",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-    button: "BUY TICKETS",
-  },
-  {
-    date: "Fri Sep 05 2019",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-    button: "BUY TICKETS",
-  },
-  {
-    date: "Wed Aug 11 2019",
-    venue: "Pres Club",
-    location: "San Francisco, CA",
-    button: "BUY TICKETS",
-  },
-];
+// Data Coming From API
+const loadShows = () => {
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/showdates?api_key=fef8ca49-1d87-458a-81a6-c89f287cabcd"
+    )
+    .then((response) => {
+      const showsArray = response.data;
+      console.table(showsArray);
+      constructShows(showsArray);
+    })
+    .catch((err) => console.log(err));
+};
+loadShows();
 
-console.table(shows);
+//
 
 const container = document.querySelector(".shows_container");
 
@@ -53,12 +29,12 @@ function constructShows(shows) {
     showsConcertDate.innerHTML = show.date;
     showsConcertDate.classList.add("concert-list__date");
 
-    const showsVenueWrapper = document.createElement("div");
-    showsVenueWrapper.classList.add("concert-list__venue-wrapper");
+    const showsPlaceWrapper = document.createElement("div");
+    showsPlaceWrapper.classList.add("concert-list__venue-wrapper");
 
-    const showsConcertVenue = document.createElement("h4");
-    showsConcertVenue.innerHTML = show.venue;
-    showsConcertVenue.classList.add("concert-list__venue");
+    const showsConcertPlace = document.createElement("h4");
+    showsConcertPlace.innerHTML = show.place;
+    showsConcertPlace.classList.add("concert-list__venue");
 
     const showsLocationWrapper = document.createElement("div");
     showsLocationWrapper.classList.add("concert-list__location-wrapper");
@@ -71,7 +47,7 @@ function constructShows(shows) {
     showsBtnWrapper.classList.add("concert-list__btn-wrapper");
 
     const showsConcertBtn = document.createElement("button");
-    showsConcertBtn.innerHTML = show.button;
+    showsConcertBtn.innerHTML = "Buy Tickets";
     showsConcertBtn.classList.add("concert-list__btn");
 
     //Adding the h4 to the wrapper div
@@ -79,8 +55,8 @@ function constructShows(shows) {
     showsConcert.appendChild(showsDateWrapper);
 
     //Adding the h4 to the wrapper div
-    showsVenueWrapper.appendChild(showsConcertVenue);
-    showsConcert.appendChild(showsVenueWrapper);
+    showsPlaceWrapper.appendChild(showsConcertPlace);
+    showsConcert.appendChild(showsPlaceWrapper);
 
     //Adding the h4 to the wrapper div
     showsLocationWrapper.appendChild(showsConcertLocation);
@@ -93,5 +69,3 @@ function constructShows(shows) {
     container.appendChild(showsConcert);
   }
 }
-
-constructShows(shows);
