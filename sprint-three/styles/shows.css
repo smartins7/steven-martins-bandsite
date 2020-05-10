@@ -109,7 +109,7 @@ a {
 }
 
 .nav-bar__link {
-  width: 5rem;
+  width: 160px;
   font-family: Avenir Next Demi Bold;
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -150,7 +150,7 @@ a {
     padding: 1.875rem 0 0;
   }
   .nav-bar__logo {
-    width: 18.75rem;
+    width: 16.875rem;
     height: 1.25rem;
     padding-left: 1.875rem;
     margin: 0 0 1rem;
@@ -166,6 +166,7 @@ a {
     padding: 0 0.938rem;
   }
   .nav-bar--link {
+    max-width: 80px;
     font-family: Avenir Next Demi Bold;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -356,6 +357,7 @@ a {
   font-size: 14px;
   border-radius: 4px;
   width: 100%;
+  max-width: 280px;
 }
 
 .concert-list__btn:hover, .concert-list__btn:focus {
@@ -422,9 +424,6 @@ a {
     padding: 0 11.25rem 1.25rem;
   }
   .shows__title {
-    font-family: Avenir Next Bold;
-    font-size: 2.25rem;
-    line-height: 2rem;
     margin-top: 1.25rem;
     padding: 1.25rem 0 0 0.625rem;
   }
@@ -571,9 +570,6 @@ a {
     margin: 0;
   }
   .contact__title {
-    font-family: Avenir Next Bold;
-    font-size: 2.25rem;
-    line-height: 2rem;
     padding-bottom: 0.938rem;
   }
   .contact__social-logos {

@@ -60,6 +60,7 @@
 
   &__btn {
     @include button(100%);
+    max-width: 280px;
 
     &:hover,
     &:focus {
@@ -130,7 +131,7 @@
     padding: 0 11.25rem 1.25rem;
 
     &__title {
-      @include header(2.25rem, 2rem);
+      // @include header(2.25rem, 2rem);
       margin-top: 1.25rem;
       padding: 1.25rem 0 0 0.625rem;
     }

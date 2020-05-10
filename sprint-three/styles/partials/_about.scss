@@ -22,6 +22,7 @@
     padding: 0.938rem 0 0.625rem;
     margin: 0;
     @include header(0.938rem, 1.563rem);
+    max-width: 320px;
     &--credit {
       padding: 0.938rem 0 1.25rem;
       margin: 0;
@@ -38,6 +39,7 @@
   &__para {
     @include paragraph(0.813rem, 1.125rem);
     text-align: left;
+    max-width: 320px;
   }
 }
 
@@ -61,6 +63,8 @@
     &__quote {
       @include header(1.188rem, 1.563rem);
       width: 91%;
+      max-width: 768px;
+
       &--credit {
         @include subheader(1rem, 1.375rem);
       }
@@ -76,6 +80,7 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      max-width: 768px;
 
       &--one {
         padding-right: 0.75rem;
@@ -95,7 +100,7 @@
     padding: 0 11.25rem 1.25rem;
 
     &__title {
-      @include header(2.25rem, 2rem);
+      // @include header(2.25rem, 2rem);
       margin-bottom: 1.875rem;
       padding: 1.25rem 0 0 0.625rem;
     }
@@ -111,6 +116,7 @@
       align-self: flex-start;
       position: relative;
       padding-left: 5.563rem;
+      max-width: 1440px;
 
       &--credit {
         position: relative;
@@ -126,7 +132,8 @@
     }
 
     &__para {
-      @include paragraph(0.938rem, 1.25rem);
+      // @include paragraph(0.938rem, 1.25rem);
+      max-width: 1440px;
       &--one {
         padding-right: 1.25rem;
         padding-left: 5.563rem;

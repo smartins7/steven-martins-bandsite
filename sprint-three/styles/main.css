@@ -109,7 +109,7 @@ a {
 }
 
 .nav-bar__link {
-  width: 5rem;
+  width: 160px;
   font-family: Avenir Next Demi Bold;
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -150,7 +150,7 @@ a {
     padding: 1.875rem 0 0;
   }
   .nav-bar__logo {
-    width: 18.75rem;
+    width: 16.875rem;
     height: 1.25rem;
     padding-left: 1.875rem;
     margin: 0 0 1rem;
@@ -166,6 +166,7 @@ a {
     padding: 0 0.938rem;
   }
   .nav-bar--link {
+    max-width: 80px;
     font-family: Avenir Next Demi Bold;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -270,6 +271,7 @@ a {
   font-family: Avenir Next Bold;
   font-size: 0.938rem;
   line-height: 1.563rem;
+  max-width: 320px;
 }
 
 .about__quote--credit {
@@ -291,6 +293,7 @@ a {
   font-size: 0.813rem;
   line-height: 1.125rem;
   text-align: left;
+  max-width: 320px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -313,6 +316,7 @@ a {
     font-size: 1.188rem;
     line-height: 1.563rem;
     width: 91%;
+    max-width: 768px;
   }
   .about__quote--credit {
     font-family: Avenir Next Demi Bold;
@@ -335,6 +339,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 768px;
   }
   .bio__para--one {
     padding-right: 0.75rem;
@@ -349,9 +354,6 @@ a {
     padding: 0 11.25rem 1.25rem;
   }
   .about__title {
-    font-family: Avenir Next Bold;
-    font-size: 2.25rem;
-    line-height: 2rem;
     margin-bottom: 1.875rem;
     padding: 1.25rem 0 0 0.625rem;
   }
@@ -368,6 +370,7 @@ a {
         align-self: flex-start;
     position: relative;
     padding-left: 5.563rem;
+    max-width: 1440px;
   }
   .about__quote--credit {
     position: relative;
@@ -378,9 +381,7 @@ a {
     padding-left: 5.563rem;
   }
   .bio__para {
-    font-family: Avenir Next Regular;
-    font-size: 0.938rem;
-    line-height: 1.25rem;
+    max-width: 1440px;
   }
   .bio__para--one {
     padding-right: 1.25rem;
@@ -452,6 +453,7 @@ a {
     grid-column-gap: 1.375rem;
     grid-row-gap: 0.313rem;
     width: 100%;
+    max-width: 760px;
   }
 }
 
@@ -459,11 +461,6 @@ a {
   .gallery {
     padding: 1.25rem 11.25rem 2.188rem;
     margin: 0;
-  }
-  .gallery__title {
-    font-family: Avenir Next Bold;
-    font-size: 2.25rem;
-    line-height: 2rem;
   }
   .gallery__items {
     display: -ms-grid;
@@ -475,6 +472,7 @@ a {
     grid-column-gap: 1.375rem;
     grid-row-gap: 0.563rem;
     width: 97%;
+    max-width: 1450px;
   }
 }
 
@@ -530,12 +528,12 @@ a {
 }
 
 .comments-form__name {
-  background-color: #fafafa;
   border: 0.063rem solid #afafaf;
   height: 2.5rem;
   width: 100%;
   padding: 0.625rem;
   margin-left: 0.625rem;
+  max-width: 250px;
 }
 
 .comments-form__name:focus {
@@ -546,12 +544,12 @@ a {
 }
 
 .comments-form__content {
-  background-color: #fafafa;
   border: 0.063rem solid #afafaf;
   height: 5rem;
   padding: 0.625rem 0 0 0.625rem;
   margin-left: 3.438rem;
   width: auto;
+  max-width: 250px;
 }
 
 .comments-form__content:focus {
@@ -569,6 +567,7 @@ a {
   border-radius: 4px;
   width: auto;
   margin-left: 3.438rem;
+  max-width: 240px;
 }
 
 .comments-form__submit:hover, .comments-form__submit:focus {
@@ -590,6 +589,7 @@ a {
   border-top: 0.063rem solid #e1e1e1;
   border-bottom: 0.063rem solid #e1e1e1;
   padding: 0.625rem 0;
+  max-width: 320px;
 }
 
 .comments-list__name-wrapper {
@@ -642,12 +642,18 @@ a {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+  .comments-form__name, .comments-form__content {
+    max-width: 510px;
+  }
   .comments-form__submit {
     width: 9.375rem;
     margin-left: 25.938rem;
   }
   .comments-list {
     padding: 0 5rem;
+  }
+  .comments-list__item {
+    max-width: 600px;
   }
   .comments-list__name-wrapper {
     font-family: Avenir Next Demi Bold;
@@ -673,18 +679,8 @@ a {
     padding: 1.25rem 11.25rem 2.188rem;
     margin: 0;
   }
-  .comments__title {
-    font-family: Avenir Next Bold;
-    font-size: 2.25rem;
-    line-height: 2rem;
-  }
   .comments__container {
     padding: 0 17.5rem;
-  }
-  .comments-form__input-title--name, .comments-form__input-title--comment {
-    font-family: Avenir Next Demi Bold;
-    font-size: 0.875rem;
-    line-height: 1rem;
   }
   .comments-form__submit {
     width: 9.375rem;
@@ -692,21 +688,6 @@ a {
   }
   .comments-list {
     padding: 0 16.875rem;
-  }
-  .comments-list__name-wrapper {
-    font-family: Avenir Next Demi Bold;
-    font-size: 1rem;
-    line-height: 0.75rem;
-  }
-  .comments-list__date-wrapper {
-    font-family: Avenir Next Regular;
-    font-size: 0.875rem;
-    line-height: 0.625rem;
-  }
-  .comments-list__content-wrapper {
-    font-family: Avenir Next Regular;
-    font-size: 1.063rem;
-    line-height: 1.5rem;
   }
 }
 
@@ -848,9 +829,6 @@ a {
     margin: 0;
   }
   .contact__title {
-    font-family: Avenir Next Bold;
-    font-size: 2.25rem;
-    line-height: 2rem;
     padding-bottom: 0.938rem;
   }
   .contact__social-logos {

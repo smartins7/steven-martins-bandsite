@@ -7,10 +7,12 @@ const commentsForm = document.getElementById("comments-form");
 
 let commentArray = [];
 
+// let timestamp;
+
 const loadComments = () => {
   axios
     .get(
-      "https://project-1-api.herokuapp.com/comments?api_key=fef8ca49-1d87-458a-81a6-c89f287cabcd"
+      "https://project-1-api.herokuapp.com/comments?api_key=d38f29e0-410e-410e-82cb-0dadaec9d27e"
     )
     .then((response) => {
       commentArray = response.data;
@@ -20,8 +22,6 @@ const loadComments = () => {
     .catch((err) => console.log(err));
 };
 loadComments();
-
-// console.table(comments);
 
 // List comments by looping through comments array and creating dom elements
 
@@ -48,6 +48,7 @@ function listComments(comments) {
     const commentsTimestampVal = comments[i].timestamp;
     const commentsTimestampElem = document.createElement("h4");
     commentsTimestampElem.innerText = commentsTimestampVal;
+    commentsTimestampElem.innerHTML = "05/10/2020";
     commentsItem.classList.add("comments-list__date");
 
     const commentsImageWrapper = document.createElement("div");
@@ -98,7 +99,7 @@ commentsForm.addEventListener("submit", (event) => {
   const commentsCommentVal = event.target.commentsComment.value;
   axios
     .post(
-      "https://project-1-api.herokuapp.com/comments?api_key=fef8ca49-1d87-458a-81a6-c89f287cabcd",
+      "https://project-1-api.herokuapp.com/comments?api_key=d38f29e0-410e-410e-82cb-0dadaec9d27e",
       {
         name: commentsNameVal,
         comment: commentsCommentVal,
@@ -106,27 +107,13 @@ commentsForm.addEventListener("submit", (event) => {
     )
     .then((response) => {
       const newMessage = response.data;
-      // if (commentsNameVal !== "" && commentsContentVal !== "") {
       commentArray.unshift(newMessage);
       const sortedComments = commentArray.sort((commentOne, commentTwo) => {
         return commentTwo.timestamp - commentOne.timestamp;
       });
       listComments(sortedComments);
-      // } else {
-      //   alert("please add your name and message");
-      // }
     })
     .catch((err) => console.log(err));
 
   event.target.reset();
 });
-
-// date = response.data[i].timestamp;
-// let dateObject = new Date(date);
-// let formattedDate =
-//   dateObject.getMonth() +
-//   1 +
-//   "/" +
-//   dateObject.getDate() +
-//   "/" +
-//   dateObject.getFullYear();
