@@ -2,7 +2,7 @@
 const loadShows = () => {
   axios
     .get(
-      "https://project-1-api.herokuapp.com/showdates?api_key=d38f29e0-410e-410e-82cb-0dadaec9d27e"
+      "https://project-1-api.herokuapp.com/showdates?api_key=cd57cf5f-84df-4483-a769-8dd1c9639a6e"
     )
     .then((response) => {
       const showsArray = response.data;
