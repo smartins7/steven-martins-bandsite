@@ -1,3 +1,5 @@
+//Imports for Biography Page
+
 //Style Imports
 @import "./partials/colors";
 @import "./partials/breakpoints";
@@ -13,3 +15,19 @@
 @import "./partials/gallery";
 @import "./partials/comments";
 @import "./partials/footer";
+
+//Imports for Shows Page
+
+//Style Imports
+@import "../styles/partials/colors";
+@import "../styles/partials/breakpoints";
+@import "../styles/partials/typography";
+@import "../styles/partials/global";
+@import "../styles/partials/grids";
+@import "../styles/partials/buttons";
+
+//Site Section Imports
+@import "../styles/partials/header";
+@import "../styles/partials/banner";
+@import "../styles/partials/concerts";
+@import "../styles/partials/footer";
